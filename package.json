@@ -1,0 +1,23 @@
+{
+  "name": "a03-mattsg6",
+  "version": "1.0.0",
+  "description": "API Stuff",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a03-mattsg6.git"
+  },
+  "author": "Matthew Gilmore",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-mattsg6/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-mattsg6#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "minimist": "^1.2.5"
+  }
+}
