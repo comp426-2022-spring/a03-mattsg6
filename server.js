@@ -98,10 +98,16 @@ app.get('/app/flip/', (req, res) => {
 })
 
 app.get('/app/flips/:number', (req, res) => {
-    res.json(countFlips(coinFlips(req.params.number)))
+    res.statusCode = 200
+    res.stateMessage = 'OK'
+    var arr = coinFlips(req.params.number)
+    res.json({"raw": arr,
+    "summary": countFlips(arr)})
 })
 
 app.get('/app/flip/call/:call', (req, res) => {
+    res.statusCode = 200
+    res.stateMessage = 'OK'
     res.json(flipACoin(req.params.call))
 })
 
