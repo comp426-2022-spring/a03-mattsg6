@@ -95,7 +95,7 @@ app.get('/app/flip', (req, res) => {
     res.statusCode = 200
     res.statusMessage = 'OK'
     res.type("text/json")
-    res.json(coinFlip())
+    res.json({ "flip" : coinFlip()})
 })
 
 app.get('/app/flips/:number', (req, res) => {
