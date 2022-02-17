@@ -82,7 +82,7 @@ const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%', port))
 })
 
-app.get('/app/', (req, res) => {
+app.get('/app', (req, res) => {
     // Respond with status 200
         res.statusCode = 200;
     // Respond with status message "OK"
@@ -91,7 +91,7 @@ app.get('/app/', (req, res) => {
         res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
-app.get('/app/flip/', (req, res) => {
+app.get('/app/flip', (req, res) => {
     res.statusCode = 200
     res.statusMessage = 'OK'
     res.type("text/json")
