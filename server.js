@@ -93,14 +93,14 @@ app.get('/app/', (req, res) => {
 
 app.get('/app/flip/', (req, res) => {
     res.statusCode = 200
-    res.stateMessage = 'OK'
+    res.statusMessage = 'OK'
     res.type("text/json")
     res.json(coinFlip())
 })
 
 app.get('/app/flips/:number', (req, res) => {
     res.statusCode = 200
-    res.stateMessage = 'OK'
+    res.statusMessage = 'OK'
     res.type("text/json")
     var arr = coinFlips(req.params.number)
     res.json({"raw": arr,
@@ -109,7 +109,7 @@ app.get('/app/flips/:number', (req, res) => {
 
 app.get('/app/flip/call/:call', (req, res) => {
     res.statusCode = 200
-    res.stateMessage = 'OK'
+    res.statusMessage = 'OK'
     res.type("text/json")
     res.json(flipACoin(req.params.call))
 })
